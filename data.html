@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="sum" onmouseover="myfunction()">show Text</button>
+  <button id="sum1" onclick="myData()">show Text</button>
+  <h1 id="demo"></h1>
+
+
+  <p id="address"></p>
+
+  <p id="data">
+  <ul>
+    <li></li>
+  </ul>
+  </p>
+  <p id="fruits"></p>
+  <script type = "text/javascript">  
+
+    function myfunction() {
+      name = 'Bilal';
+      age = 89;
+      address = 'Test';
+      postalCode = '61100';
+      document.getElementById("demo").innerHTML = `The Answer is ${name + ' ' + age + ' ' + address + ' ' + postalCode}` 
+
+    }
+    function myAddress() {
+      name = 'bilal';
+      return name;
+    }
+    document.getElementById("address").innerHTML = myAddress()
+
+    function myData() {
+      array = ['Bilal', 89, 'Test', 61100];
+      for (i = 0; i < 5; i++) {
+        document.getElementById("data").innerHTML = `The Answer is<br/> ${array[i]}`
+      }
+    }
+
+const fruits = ["Bilal", 19, "TEST", 61100];
+let fLen = fruits.length;
+
+let text = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("fruits").innerHTML = text;
+
+</script>
+
+          
+</body>
+</html>
